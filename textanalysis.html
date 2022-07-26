@@ -39,12 +39,9 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7"> -->
                         <div class="post-heading">
-                            <h1>Accessibility Tests Analysis</h1>
-                            <p class="subheading">Analyzing the ability of automated accessibility checkers to detect problems on websites</p>
+                            <h1>Dictionaries and Text Analysis</h1>
+                            <p class="subheading">Apply string manipulations to preform sentiment analysis of braille text</p>
                             <span class="meta">
-                                <!--TODO add the actual author-->
-                                Created by
-                                <a href="https://catiembaker.github.io/">Catie Baker</a>
                             </span>
                         </div>
                     </div>
@@ -92,7 +89,7 @@
             What makes it refreshable is whenever the user moves their cursor through keyboard or voice commands, 
             the display updates the dots in the braille cells.</p>
         <img src="assets/img/screen-reader.png" alt="Person using a screen reader">
-        <img src="assets/img/braille-display.png" alt="An example of a braille display">
+        <img src="assets/img/braille-display.png" alt="An example of a braille display" style = "width:500px;height:333px;">
 
         <p>Braille was also the first writing system with binary encoding. 
             The system as devised by Louis Braille consists of two parts:</p>
@@ -153,7 +150,7 @@
                 Anything that is not contained in the dictionary (e.g. punctuation marks), should be ignored. 
                 The function should return a nested list of Braille characters, with raised dots represented as 1's and flat dots represented as 0's. 
                 For example, the function should print the nested list below when given this call:
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #648db1;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #95c7f2;"> 
                     <p style="color:black">
                         braille_string = translator(“Hi!”, braille_dictionary) <br>
                         print(braille_string) <br>
@@ -163,7 +160,7 @@
                 </blockquote>
                 <p>You can use the helper function print_braille that will format the returned nested list as braille to the console. 
                     See below for an example:</p>
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #648db1;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #95c7f2;"> 
                     <p style="color:black">
                         braille_string = translator(“Hello, world!”, braille_dictionary) <br>
                         print(braille_string) <br>
@@ -191,7 +188,7 @@
                     You should remove any whitespace surrounding words and convert them to lowercase.
                     For example, the test-words.txt file (shown below) contains the first ten lines of Macalester's mission statement. 
                     Note that as specified in the file, all lines beginning with a semicolon should be ignored.</p>
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #648db1;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #95c7f2;"> 
                     <p style="color:black">
                         ; This is a file containing a list of words. Lines that begin with a semicolon <br>
                         ; are comments and they should be ignored. All the other lines contain a single<br>
@@ -210,7 +207,7 @@
                     </p>
                 </blockquote>
                 <p>Your function should behave as follows when given this file:</p>
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #648db1;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #95c7f2;"> 
                     <p style="color:black">
                         wordList = read_words('test-words.txt')  <br>
                         print(wordList) <br>
@@ -229,13 +226,13 @@
                 For this question, you will develop a function that performs sentiment detection. 
                 For example, consider these two snippets of reviews of the film "Zoolander No. 2", taken from Rotten Tomatoes:</p>
 
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #84d3c0;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #94ecd8;"> 
                     <p style="color:black">
                         ' Did you like "Zoolander"? Good, then you'll like "Zoolander 2."'<br>
                         — Gersh Kuntzman, New York Daily News
                     </p>
                 </blockquote>
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #b984d3;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #e7b6ff;"> 
                     <p style="color:black">
                         ' Did you like "Zoolander"? Good, then you'll like "Zoolander 2."'<br>
                         — Gersh Kuntzman, New York Daily News
@@ -249,7 +246,7 @@
                     The function should return the strings: 'positive' , 'negative' or 'neutral' depending on whether the sentence has clear positive sentiment, clear negative sentiment, or no clear sentiment.
                     For example, you can combine your detect_sentiment function with the files you downloaded and functions you created in the previous question as follows:</p>
             
-                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #648db1;"> 
+                <blockquote style="border: 2px solid #212529; padding: 10px; background-color: #95c7f2;"> 
                     <p style="color:black">
                         posWords = read_words('positive-words.txt') <br>
                         negWords = read_words('negative-words.txt') <br>
