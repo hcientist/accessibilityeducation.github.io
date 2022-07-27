@@ -115,8 +115,7 @@
                         <li>Space in Braille is represented by a cell with no dots raised. </li>
                     </ol>
 
-                    <img src="assets/img/braille.png" alt="a chart of all Braille letters">
-
+                    <img src="assets/img/braille.png" alt="Table showing the language of braille, color coded to demonstrate the differences between decades.">
                     <p>Output should be recognizable as Braille. In your output, you can use 0’s and 1’s, with 1’s representing raised dots and 0’s representing flat dots.</p>
                     <p>Only the 26 alphabet characters, upper and lowercase, and space are required for a minimal solution. All input characters not supported by your solution should be ignored. 
                         You are not allowed to use Unicode Braille characters. Vertical display of letters in Braille is acceptable. Bonus points for displaying Braille letters horizontally.</p>
@@ -133,8 +132,7 @@
                     <p>Since only the characters a-z and A-Z are supported in our implementation, the method ASCII_to_braille will need to first check if the character can be translated to a valid Braille letter. 
                         We can refer to an ASCII chart, and come up with acceptable ranges of characters. Don’t forget about spaces: “ ”.</p>
 
-                    <img src="assets/img/ascii.png" alt="a chart of all ASCII letters and their numeric values">
-
+                    <img src="assets/img/ascii.png" alt="a chart of all ASCII letters and their numeric values, from decimal value 1 to 127">
                     <p>If not, it should return as null and otherwise be ignored by your program.</p>
                     <p>For each range of characters, upper and lower, subtracting a or A respectively from the character will give the character’s place in the alphabet. 
                         Using modulo on that value will tell which decade each character is and what dots in that character are raised.</p>
