@@ -43,10 +43,6 @@
                     <div class="post-heading">
                         <h1>Braille Translator</h1>
                         <p class="subheading">creating an ASCII to Braille translator in C.</p>
-                        <span class="meta">
-                            Created by
-                            <a href="https://github.com/kurtzhk">Kale Kurtzhall</a>
-                        </span>
                     </div>
                 </div>
             </div>
@@ -58,9 +54,6 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
 
-                    <h2>Assignment Information</h2>
-                    <p><strong>Topics: </strong>accessibility, visual impairments, Braille, C basics</p>
-                    <p><strong>Summary: </strong>strings, file I/O, manipulating ASCII characters, program arguments</p>
                     <p>Braille is a tactile writing system used by people with visual impairment. It is traditionally written with embossed paper and on signage. Braille users can read computer screens using refreshable braille displays. They can write braille
                         with the original slate and stylus or type it on a braille writer, such as a portable braille notetaker or computer that prints with a braille embosser. </p>
 
@@ -122,8 +115,7 @@
                         <li>Space in Braille is represented by a cell with no dots raised. </li>
                     </ol>
 
-                    <img src="assets/img/braille.png" alt="a chart of all Braille letters">
-
+                    <img src="assets/img/braille.png" alt="Table showing the language of braille, color coded to demonstrate the differences between decades.">
                     <p>Output should be recognizable as Braille. In your output, you can use 0’s and 1’s, with 1’s representing raised dots and 0’s representing flat dots.</p>
                     <p>Only the 26 alphabet characters, upper and lowercase, and space are required for a minimal solution. All input characters not supported by your solution should be ignored. 
                         You are not allowed to use Unicode Braille characters. Vertical display of letters in Braille is acceptable. Bonus points for displaying Braille letters horizontally.</p>
@@ -140,8 +132,7 @@
                     <p>Since only the characters a-z and A-Z are supported in our implementation, the method ASCII_to_braille will need to first check if the character can be translated to a valid Braille letter. 
                         We can refer to an ASCII chart, and come up with acceptable ranges of characters. Don’t forget about spaces: “ ”.</p>
 
-                    <img src="assets/img/ascii.png" alt="a chart of all ASCII letters and their numeric values">
-
+                    <img src="assets/img/ascii.png" alt="a chart of all ASCII letters and their numeric values, from decimal value 1 to 127">
                     <p>If not, it should return as null and otherwise be ignored by your program.</p>
                     <p>For each range of characters, upper and lower, subtracting a or A respectively from the character will give the character’s place in the alphabet. 
                         Using modulo on that value will tell which decade each character is and what dots in that character are raised.</p>
@@ -169,19 +160,7 @@
                         <li>Check for memory leaks. Remember that tools like valgrind and gdb can help diagnose errors.</li>
                     </ol>
 
-                    <h3>Grading Criteria</h3>
-
-                    <ul>
-                        <li>Activity Journal (10)</li>
-                        <li>Clean build (5)</li>
-                        <li>Correctly handle arguments and check for possible I/O errors (10)</li>
-                        <li>Correctly open and close a file using standard I/O functions (10)</li>
-                        <li>Correctly read from file and write to file using standard I/O functions(10)</li>
-                        <li>Correctly translate ASCII chars to Braille letters (25)</li>
-                        <li>Correct file output (10)</li>
-                        <li>Correctly managing memory (20)</li>
-                        <li>BONUS: display Braille horizontally. (10)</li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
@@ -192,7 +171,7 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
 
-                    <div class="small text-center text-muted fst-italic">Copyright &copy; ACE Lab 2021</div>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; 2021</div>
                 </div>
             </div>
         </div>
