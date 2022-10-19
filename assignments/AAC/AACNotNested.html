@@ -40,7 +40,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7"> -->
                         <div class="post-heading">
                             <h1>Augmentative and Alternative Communication Devices</h1>
-                            <p class="subheading">Modeling a simple symbol based AAC device that has two levels of images</p>
+                            <p class="subheading">Modeling a simple symbol based AAC device</p>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         
-                        <h2>Assignment - Nested Version</h2>
+                        <h2>Assignment - Non-Nested Version</h2>
                         <h3>Starter Code</h3>
-                        <p><a href="https://github.com/catiembaker/AACNestedHW">Github Starter Code</a></p>
+                        <p><a href="https://github.com/catiembaker/AACNotNested">Github Starter Code</a></p>
                         <h3>Details</h3>
                         <p>There are many disabilities that affect a person's ability to speak.&nbsp;For instance certain disabilities, such as ALS, affect the muscles of the mouth, causing slurred speech that may become unintelligible. Other disabilities may include developmental delays that affect a person's speech. As such, alternatives to verbal communication are often sought. These alternatives are referred to as Augmented and Alternative Communication Systems (AACs). An AAC can be either high-tech or low/no-tech. An example of low/no-tech options might be a pointing to printed pictures to communicate an idea or writing on paper to communicate.</p>
 <p>However, technology can provide different options for those with speech impairments to communicate. One of the most famous people to use an AAC is probably Stephen Hawking. His AAC would speak aloud what he typed and was extremely high tech, combining sensors to use a facial muscle to control an interface and artificial intelligence to aid text prediction, decreasing the amount that he needed to type. Below is a short video highlighting the technology behind his AAC.&nbsp;</p>
@@ -75,22 +75,19 @@
 </ol>
 <p>Run the TextSpeech Driver class to ensure the text to speech engine is working. Code from: <a href="https://www.geeksforgeeks.org/converting-text-speech-java/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/converting-text-speech-java/</a></p>
 <p>&nbsp;</p>
-<p>You have been given the following classes to represent the the logic of the AAC. The class should use HashMaps to store the mappings. You have been provided a GUI Class,&nbsp;<code>AAC</code>, which creates a graphical interface which displays the images and speaks the text aloud. The AAC will have a main page that initially shows all the categories that are on the AAC. When a user clicks on one of the category images, it will load a new page of images. When a user clicks on one of these images, the text associated with that image is spoken aloud.&nbsp; In order for the AAC class to work, you will need to implement two classes, <a class="inline_disabled" href="https://accessibilityeducation.github.io/assignments/AAC/AACCategory.html" target="_blank" rel="noopener">AACCategory</a> and <a class="inline_disabled" href="https://accessibilityeducation.github.io/assignments/AAC/AACMappings.html" target="_blank" rel="noopener">AACMappings</a> which are described below.</p>
-<h4>Part 1: AACCategory</h4>
-<p>This portion of the AAC should represent a single category of items in the AAC. It stores the mapping between the image location and the text that should be spoken and the name of the category. You are to implement the methods specified in the documentation.</p>
-<h4>Part 2: AACMapping</h4>
-<p>This is the class the keeps track of the complete set of AAC mappings. It will store the mapping of the images on the home page to the AACCategories. The class should keep track of the current category that is being displayed. Then given the current category ("" if the home screen or the category name for any other category), it should respond appropriately for each of the methods.</p>
-<p>The AACMapping constructor takes a file that will be in the following format. In the file, the first line will represent the category. It will have the file location first (will be one "word") and then the category name. Then each of the items that is in the category will follow and the line will start with a "&gt;". The line will then have the file location (will be one "word") and then the text to speak. A sample file with two categories (food and clothing) and 2 and 3 items in each category is shown below.</p>
-<pre>img/food/plate.png food<br />&gt;img/food/icons8-french-fries-96.png french fries<br />&gt;img/food/icons8-watermelon-96.png watermelon<br />img/clothing/hanger.png clothing<br />&gt;img/clothing/collaredshirt.png collared shirt<br />&gt;img/clothing/sweater.png sweater<br />&gt;img/clothing/skirt.png skirt</pre>
-<p>In the file, the first line will represent the category. It will have the file location first (will be one "word") and then the category name. Then each of the items that is in the category will follow and the line will start with a "&gt;". The line will then have the file location (will be one "word") and then the text to speak.&nbsp;</p>
+<p>You have been given the following classes to represent the the logic of the AAC. The class should use HashMaps to store the mappings. You have been provided a GUI Class,&nbsp;<code>AAC</code>, which creates a graphical interface which displays the images and speaks the text aloud. The AAC will have a page that shows all the images that are on the AAC. When a user clicks on one of these images, the text associated with that image is spoken aloud.&nbsp; In order for the AAC class to work, you will need to implement one class, <a class="inline_disabled" href="https://accessibilityeducation.github.io/assignments/AAC/AACMappingsNotNested.html" target="_blank" rel="noopener">AACMappings</a> which is described below.</p>
+
+<h4>AACMapping</h4>
+<p>This is the class the keeps track of the complete set of AAC mappings. It will store the mapping of the images to the text to be spoken.</p>
+<p>The AACMapping constructor takes a file that will be in the following format. In the file, each line will represent one item. It will have the file location first (will be one "word") and then the text to be spoken.  A sample file with 4 items is shown below.</p>
+<pre>img/food/plate.png food<br />img/food/icons8-french-fries-96.png french fries<br />img/food/icons8-watermelon-96.png watermelon<br />img/clothing/collaredshirt.png collared shirt</pre>
+<p>Then each of the items that is in the category will follow and the line will start with a "&gt;". The line will then have the file location (will be one "word") and then the text to speak.&nbsp;</p>
 <ul>
-    <li><code>constructor -&nbsp;</code>this method should read in the file and create the relevant mappings from images to categories and add all the items to each category. It should also start the AAC on the home screen</li>
-    <li><code>add</code> - should add the image and text to the category that is currently selected. If it is on the home screen, it should create a new category with the given image and name. If it is in a category, it should add the image and text to speak to the currently shown category</li>
-    <li><code>getCurrentCategory&nbsp;</code>- it should return which is the current category the page is on or the empty string if the page is empty</li>
-    <li><code>getImageLocs -&nbsp;</code>it should return an array of the images for the currently selected category or the home page</li>
-    <li><code>getText -&nbsp;</code>given an image, it will either return the name of the category associated with that image if on the home screen and update the current category to that category or if in a category, it will return the text to be spoken that is associated with that image. If the image is not found in the expected area, it will throw the ElementNotFoundException</li>
-    <li><code>isCategory -&nbsp;</code>given an image, it will return true if it is a category image and false otherwise</li>
-    <li><code>reset -</code>&nbsp;resets the current category to the home screen ("")</li>
+    <li><code>constructor -&nbsp;</code>this method should read in the file and create the relevant mappings from images to text to be spoken</li>
+    <li><code>add</code> - should add the image and text to the mapping</li>
+    
+    <li><code>getImageLocs -&nbsp;</code>it should return an array of the images AAC</li>
+    <li><code>getText -&nbsp;</code>given an image, it will either return the text to be spoken that is associated with that image. If the image is not found, it will throw the ElementNotFoundException</li>
     <li><code>writeToFile -&nbsp;</code>writes the AACMappings in the same format that they are read in</li>
 </ul>
 <p>Make sure you include the comments from the Javadoc and use good style.</p>
