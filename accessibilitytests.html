@@ -37,7 +37,7 @@
         <header class="masthead" >
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7"> -->
+                    <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
                             <h1>Accessibility Tests Analysis</h1>
                             <p class="subheading">Analyzing the ability of automated accessibility checkers to detect problems on websites</p>
@@ -103,21 +103,20 @@
         <span>&nbsp;</span>This method takes test details (or a portion of the test details) as a parameter, and displays the&nbsp;test information of all tests that match (or contain) that detail (should be case insensitive). As before, the number of matching&nbsp;tests should be displayed at the end. For example,&nbsp;if the information from <code>
             <span>a11yCheckersResults.txt</span>
         </code>&nbsp;was read in and stored in a<span> <code>AccessibilityResults</code></span>
-        <span>&nbsp;object&nbsp;</span>named<span>&nbsp;</span><code>a11y</code>, then<span>&nbsp;</span><code>a11y.showTestResults("Colour")&nbsp;</code>should display the following:
-        <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">Colour/Contrast: Colour alone is used to convey content Google: notfound WAVE: notfound SortSite: notfound ASLint: manual
-            <br />
-            <span style="font-size: 1rem;">Links: Identifying links by colour alone Google: notfound WAVE: notfound SortSite: notfound ASLint: notfound
-                <br />Forms: Errors identified by colour only Google: notfound WAVE: notfound SortSite: notfound ASLint: manual
-                <br />Forms: Errors identified with a poor colour contrast Google: warning WAVE: error SortSite: error ASLint: error
-                <br />HTML: Inline style adds colour Google: notfound WAVE: notfound SortSite: notfound ASLint: notfound
-                <br />
-                <br />
-            </span>
-            <span style="font-size: 1rem;">Total tests matching: 5
-                <br />
-                <br />
-            </span>
-        </blockquote>
+        <span>&nbsp;object&nbsp;</span>named<span>&nbsp;</span><code>a11y</code>, then<span>&nbsp;</span><code>a11y.showTestResults("Colour")&nbsp;</code>should display the following:<br>
+        <pre>
+Colour/Contrast: Colour alone is used to convey content Google: notfound WAVE: notfound SortSite: notfound ASLint: manual
+Colour/Contrast: Small text does not have a contrast ratio of at least 4.5:1 so does not meet AA Google: error WAVE: error SortSite: error_paid ASLint: notfound
+Colour/Contrast: Large text does not have a contrast ratio of at least 3:1 so does not meet AA Google: error WAVE: error SortSite: error_paid ASLint: notfound
+Colour/Contrast: Small text does not have a contrast ratio of at least 7:1 so does not meet AAA Google: error WAVE: error SortSite: error_paid ASLint: notfound
+Colour/Contrast: Large text does not have a contrast ratio of at least 4.5:1 so does not meet AAA Google: error WAVE: error SortSite: error_paid ASLint: notfound
+Colour/Contrast: Focus not visible Google: notfound WAVE: notfound SortSite: notfound ASLint: notfound
+Links: Identifying links by colour alone Google: notfound WAVE: notfound SortSite: notfound ASLint: notfound
+Forms: Errors identified by colour only Google: notfound WAVE: notfound SortSite: notfound ASLint: manual
+Forms: Errors identified with a poor colour contrast Google: warning WAVE: error SortSite: error ASLint: error
+HTML: Inline style adds colour Google: notfound WAVE: notfound SortSite: notfound ASLint: notfound
+Total tests matching: 10
+        </pre>
     </li>
     <li><strong>showByCategory:</strong>
         <span>&nbsp;</span>
